@@ -1,34 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.0.0/firebaseui.css" />
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700|Roboto:300,400,700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Document</title>
+	<script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="styles.css">
 </head>
+<body>
+	<div id="container">
+		<div id="user-options">
+			<div>Chatting as: <span id="name"></span></div>
+			<div id="change-name">change name</div>
+		</div>
+		<form id="message-form">
+			<input type="text" id="message-input" placeholder="message" required>
+			<button class="orange-button">send</button>
+		</form>
 
-<div id="app">
- 
-  <!-- <img src="https://firebasestorage.googleapis.com/v0/b/fir-images-a61c9.appspot.com/o/firestore.png?alt=media&token=56d039dc-4a6c-477b-a153-a4bb8234646f" /> -->
-  <!-- <img src="https://firebasestorage.googleapis.com/v0/b/fir-images-a61c9.appspot.com/o/hosting.png?alt=media&token=57c8adb6-08c4-43f7-9395-4c299896a36c" /> -->
-  <img src="https://firebasestorage.googleapis.com/v0/b/fir-images-a61c9.appspot.com/o/codelab.png?alt=media&token=f45f808c-ce40-4b34-944c-8d8fac00e13d" />
+		<div id="messages"></div>
 
- <section id="event-details-container">
-      <h1>Firebase Meetup</h1>
-
-      <p><i class="material-icons">calendar_today</i> October 30</p>
-      <p><i class="material-icons">location_city</i> San Francisco</p>
-  </section>
-
-  <hr>
-
-  <section id="firebaseui-auth-container"></section>
-
-  <section id="description-container">
-      <h2>What we'll be doing</h2>
-      <p>Join us for a day full of Firebase Workshops and Pizza!</p>
-  </section>
-
-  <section id="guestbook-container">
-  </section>
-
-</div>
-
+		<button id="clear" class="purple-button">Clear All Messages</button>
+	</div>
+<script src="index.js"></script>
+</body>
+</html>
